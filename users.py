@@ -1,3 +1,6 @@
+from decorators import pluggable
+
+@pluggable
 class User:
     def __init__(self, username: str, email: str) -> None:
         self.username = username
