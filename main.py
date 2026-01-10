@@ -3,11 +3,15 @@
 Main module for the application.
 """
 
+# https://packaging.python.org/en/latest/guides/creating-and-discovering-plugins/
+
 import sys
 import importlib
 import pkgutil
 
 import plugins
+from users import User
+
 
 def iter_namespace(ns_pkg):
     # Specifying the second argument (prefix) to iter_modules makes the
@@ -28,6 +32,9 @@ def main():
     """
     print("Hello, World!")
     print("Discovered plugins:", list(discovered_plugins.keys()))
+
+    User_instance = User("john_doe", "john_doe@example.com")
+    print(User_instance.get_info())
     return 0
 
 
