@@ -15,7 +15,12 @@ def main():
     print("Discovered plugins:", list(discovered_plugins.keys()))
 
     User_instance = User("john_doe", "john_doe@example.com")
+    print("-- Initial User Info --")
     print(User_instance.get_info())
+
+    User_instance.set_email("john_new@example.com")
+    print(User_instance.get_info())
+    
     return 0
 
 
