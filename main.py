@@ -16,10 +16,19 @@ def main():
 
     User_instance = User("john_doe", "john_doe@example.com")
     print("-- Initial User Info --")
+    print("----")
+
     print(User_instance.get_info())
+    print("----")
 
     User_instance.set_email("john_new@example.com")
+
     print(User_instance.get_info())
+    print("----")
+
+    print(User_instance._get_info())
+    print("----")
+
     
     return 0
 
