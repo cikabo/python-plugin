@@ -11,3 +11,6 @@ class User:
     
     def set_email(self, new_email: str) -> None:
         self.email = new_email
+    
+    def _get_info(self):
+        return f"Username: {self.username}, Email: {self.email}"
